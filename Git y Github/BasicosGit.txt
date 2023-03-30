@@ -1,0 +1,57 @@
+hola
+hola
+---- Comandos -----
+
+git init: para crear repositorio
+git status: te muestra el el estado de los archivos
+git add: para agregar el archivo a Stages
+git rm --cached <file>: eliminar el archivo de stage (to unstage)
+git commit: para enviar los cambios de stage al repositorio
+git commit -m "mensaje descriptivo"
+git log : historial de commit hechos
+git commit --amend: para modificar commit es sencillo hacerlo con el ultimo commit
+
+git commit --soft HEAD~1 : deshacer el ultimo commit sin modificar el espacio de trabajo
+// --soft : mantiene los cambios hechos en el archivo original , puede usar --hard para lo contrario
+// HEAD se refiere al ultimo commit
+// ~1 se refiere a que va a retroceder 1 registro en el repositorio
+
+git branch nombreDeRama: crear rama
+git branch: ver ramas 
+git checkout nombreDeRama: para cambiar de rama
+git checkout -b nombreDeRama: crea y se cambia a la rama creada (la rama creada sera una copia de la rama donde se encuentre)
+git branch -m nombreDeRama: modificar el nombre de la rama donde se encuentra
+git branch -d nombreDeRama: eliminar una rama (ramas locales), no estar en la rama a eliminar 
+git log --oneline : para ver historial de commit uno por linea
+git log -p : muestra los cambios que se hicieron en el commits
+
+// cambio en rama Dev
+git merge nombreDeRama: combina una rama con otra, debe estar en la rama con que quiere que reciba los cambios
+
+git clone linkRepositoriRemoto: para clonae un repositorio
+git Remote: para ver el nombre del repositorio remoto
+git fetch origin: verifica los cambios que han hecho los demas al repositorio remoto pero no lo combina con el local
+git push origin(Alias del repositorio) nombreDeRama: para enviar los cambios realizados al repositorio remoto
+git pull origin(Alias del repositorio) nombreDeRama: para actualizar los cambios  del repositorio local con el repositorio remoto, buscara si hay cambios en el repositorio remoto y actualizara el repositorio local
+git remote add origin linkRepositoriRemoto: para crear repositorio remote desde el repositorio local
+
+----- Etiquetas-----
+(master): al crear un repositorio siempre se creara en la rama master 
+// si quieres eliminar el repositorio puedes borarr la carpeta .git
+
+--- Estados de los archivos----
+U = Untracked = sin seguimiento : significa que no se a a;adido nada al repositorio, 
+el proyecto creado todavia no se a guardado ni la primea vez en el repositorio
+
+M: Modifed : modificado : haz hecho cambios en el archivo pero no se ha subido a Stages
+
+A: Stages : Preparado : el archivo se encuentra en la zona intermedia , de preparacion antes de entrar al repositorio
+
+C: Commitedd: Confirmado : el archivo ya esta guardado en el repositorio local .git
+
+-------configuracion---------
+
+usuario: git config --global user.name "usuario"
+Email:   git config --global user.email "email"
+editor: git config --global core.editor "comando para editor"
+
