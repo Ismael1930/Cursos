@@ -491,7 +491,7 @@
       console.log("Buenas noches");
     } */
 
-    /* Operador Ternario (condición) ? verdadero : falsa */
+    /* Operador Ternario (condición) ? verdadero : falsa;  es una*/
     /*  console.log("Operador Ternario");
      let eresMayor = (edad >= 18)
        ? "Eres mayor de Edad"
@@ -571,10 +571,10 @@
       apellido: "MirCha",
       edad: 35
     }
-    for (const propiedad in jon) {
+    for (const propiedad in jon) {  // ForIn para rrecorre propiedade de un objeto
       console.log(`Key: ${propiedad}, Value: ${jon[propiedad]}`);
     }
-    for (const elemento of numeros) {
+    for (const elemento of numeros) {  //ForOf recorre todos los elementos de cualquier objeto iterable ej: arreglos,listas,colecciones, cadenas
       console.log(elemento);
     }
     let cadena = "Hola Mundo";
@@ -669,7 +669,7 @@
       nombre,
       edad,
       raza: "Callejero",
-      ladrar() {
+      ladrar() { /// tambien se puede declarar asi
         console.log("guauu guauu guauu!!!")
       }
     }
@@ -681,7 +681,8 @@
 
 
     /* **********     Curso JavaScript: 20. Parámetros REST & Operador Spread - #jonmircha     ********** */
-    /* function sumar(a, b, ...c) {
+    //Parámetros REST son parametros que recibe una funcion donde puede recebir infinitos parametros
+    /* function sumar(a, b, ...c) { // tres puntos suspencivos para senalar que puede recibir infinitos parametros, la variable c se tratara como un arreglo
       let resultado = a + b;
       c.forEach(function (n) {
         resultado += n
@@ -694,10 +695,12 @@
     console.log(sumar(1, 2, 3, 4, 5));
     console.log(sumar(1, 2, 3, 4, 5, 6));
     console.log(sumar(1, 2, 3, 4, 5, 6, 7));
+
+    //Operador Spread: 
     const arr1 = [1, 2, 3, 4, 5],
       arr2 = [6, 7, 8, 9, 0];
     console.log(arr1, arr2);
-    const arr3 = [...arr1, ...arr2];
+    const arr3 = [...arr1, ...arr2]; expande el arrego con cada areeglo que se agregue
     console.log(arr3); */
 
 
